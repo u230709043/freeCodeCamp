@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.svg">
+    <title>Flight Booking</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <div class="nav-menu">
+                <ul id="navigation" class="nav-links">
+                    <li><button>Flight Tickets</button></li>
+                    <li><button>Hotels</button></li>
+                    <li><button>Bus Tickets</button></li>
+                    <li><button>Car Rental</button></li>
+                    <li><button>Transfers</button></li>
+                    <li><button>Campaigns</button></li>
+                    <li><button>Help</button></li>
+                </ul>
+                <ul id="user-actions" class="nav-links">
+                    <li><button>Login</button></li>
+                    <li><button>Sign Up</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="flight-search-form" class="container">
+            <h1>Flight Search Form</h1><br>
+            <form action="#flight-search-form" method="GET">
+                <section id="flight-type-options">
+                    <h3>Flight Type</h3><br>
+                    <table>
+                        <tr>
+                            <td><input type="radio" id="one-way" name="flight-type" value="one-way"><span
+                                    class="checkmark"></span></td>
+                            <td><label for="one-way">One Way</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="round-trip" name="flight-type" value="round-trip"><span
+                                    class="checkmark"></span></td>
+                            <td><label for="round-trip">Round Trip</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="multi-city" name="flight-type" value="multi-city"><span
+                                    class="checkmark"></span></td>
+                            <td><label for="multi-city">Multi-City</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="direct-flights" name="flight-type"
+                                    value="direct-flights"><span class="checkmark"></span></td>
+                            <td><label for="direct-flights">Non-stop flights Only</label></td>
+                        </tr>
+                    </table>
+                </section>
+                <br>
+                <section id="flight-information">
+                    <h3>Flight Information</h3><br>
+                    <table>
+                        <tr>
+                            <td><label for="from">From:</label></td>
+                            <td><input type="text" id="from" name="from" maxlength="20" placeholder="Example: İstanbul">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="to">To:</label></td>
+                            <td><input type="text" id="to" name="to" maxlength="20" placeholder="Example: Antalya"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="departure-date">Departure Date:</label></td>
+                            <td><input type="date" id="departure-date" name="departure-date"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="return-date">Return Date:</label></td>
+                            <td><input type="date" id="return-date" name="return-date"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="passengers">Passengers:</label></td>
+                            <td><input type="number" id="passengers" name="passengers" min="1"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="class">Class:</label></td>
+                            <td>
+                                <select id="class" name="class">
+                                    <option value="">Select Class</option>
+                                    <option value="economy">Economy</option>
+                                    <option value="business">Business</option>
+                                    <option value="first-class">First Class</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <br>
+                <br>
+                <input type="submit" value="Search Flights" class="btn">
+            </form>
+        </section>
+        <section id="popular-flights">
+            <h1>Popular Flights</h1>
+            <div class="popular-flight-grid">
+                <div id="popular-flight-1" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>İstanbul</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>Antalya</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 20m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$45</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="popular-flight-2" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>İstanbul</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>İzmir</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 10m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$40</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="popular-flight-3" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>Ankara</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>İstanbul</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 05m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$38 </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="popular-flight-4" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>İzmir</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>Antalya</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 15m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$42</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="popular-flight-5" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>İstanbul</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>Trabzon</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 45m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="popular-flight-6" class="popular-flight-card container">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>From:</h3>
+                            </td>
+                            <td>Antalya</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>To:</h3>
+                            </td>
+                            <td>Ankara</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Duration:</h3>
+                            </td>
+                            <td>1h 10m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Price:</h3>
+                            </td>
+                            <td>$39</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn">View Flight</button></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="campaigns">
+        <div class="campaigns-margin">
+            <h1>Special Offers & Campaigns</h1>
+            <div class="campaigns-grid">
+                <figure class="container"><img src="images/campaign1.jpg" alt="First Flight Discount">
+                    <figcaption>
+                        <h3>First Flight Discount</h3>
+                        <article>Get a special discount on your first flight.</article><button
+                            class="btn campaigns-btn">Explore Offer</button>
+                    </figcaption>
+                </figure>
+                <figure class="container"><img src="images/campaign2.jpg" alt="International Flight Deals">
+                    <figcaption>
+                        <h3>International Flight Deals</h3>
+                        <article>Discover special prices for selected international destinations.</article><button
+                            class="btn campaigns-btn">Explore Offer</button>
+                    </figcaption>
+                </figure>
+                <figure class="container"><img src="images/campaign3.jpg" alt="Student Offers">
+                    <figcaption>
+                        <h3>Student Offers</h3>
+                        <article>Special flight deals for students.</article><button class="btn campaigns-btn">Explore
+                            Offer</button>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section id="why-choose-us">
+        <h1>Why Choose Us?</h1>
+        <div class="choose-grid">
+            <div class="container choose-card">
+                <div class="icon">💰</div>
+                <h3>Affordable Prices</h3>
+                <article>Compare hundreds of flights and find suitable prices.</article>
+            </div>
+            <div class="container choose-card">
+                <div class="icon">🔒</div>
+                <h3>Secure Booking</h3>
+                <article>Enjoy a safe and reliable booking experience.</article>
+            </div>
+            <div class="container choose-card">
+                <div class="icon">⚡</div>
+                <h3>Fast and Easy</h3>
+                <article>Find and compare flights quickly and easily.</article>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-mobile-responsive">
+
+            <input type="radio" name="footer-nav" id="footer-nav-flights" hidden>
+            <input type="radio" name="footer-nav" id="footer-nav-help" hidden>
+            <input type="radio" name="footer-nav" id="footer-nav-company" hidden>
+            <input type="radio" name="footer-nav" id="footer-nav-follow" hidden>
+
+            <div class="footer-aside-grid">
+                <aside class="footer-aside-menu" id="footer-aside-flights">
+                    <li>Domestic Flights</li>
+                    <li>International Flights</li>
+                    <li>Popular Routes</li>
+                </aside>
+
+                <aside class="footer-aside-menu" id="footer-aside-help">
+                    <li>Frequently Asked Questions</li>
+                    <li>Contact Us</li>
+                    <li>Cancellation & Refund</li>
+                </aside>
+
+                <aside class="footer-aside-menu" id="footer-aside-company">
+                    <li>About Use</li>
+                    <li>Careers</li>
+                    <li>Contact</li>
+                </aside>
+
+                <aside class="footer-aside-menu" id="footer-aside-follow">
+                    <li>Instagram</li>
+                    <li>X</li>
+                    <li>Facebook</li>
+                    <li>LinkedIn</li>
+                </aside>
+            </div>
+
+
+            <ul class="footer-side-menu">
+                <li><label for="footer-nav-flights" id="footer-nav-flights-trigger">&#8592 Flight Tickets</label></li>
+                <li><label for="footer-nav-help">&#8592 Help</label></li>
+                <li><label for="footer-nav-company">&#8592 Company</label></li>
+                <li><label for="footer-nav-follow">&#8592 Follow us</label></li>
+            </ul>
+        </div>
+        <div class="footer-margin footer-pc-responsive">
+            <table>
+                <tr>
+                    <th>Flight Tickets</th>
+                    <th>Help</th>
+                    <th>Company</th>
+                    <th>Follow us</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Domestic Flights</li>
+                            <li>International Flights</li>
+                            <li>Popular Routes</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Frequently Asked Questions</li>
+                            <li>Contact Us</li>
+                            <li>Cancellation & Refund</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Careers</li>
+                            <li>Contact</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Instagram</li>
+                            <li>X</li>
+                            <li>Facebook</li>
+                            <li>LinkedIn</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <p><em>© 2026 FlightSearch – All Rights Reserved.</em></p>
+    </footer>
+</body>
+
+</html>
